@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{EA17B5A1-85C2-4369-B09B-B28D5BF16967}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{5F7E2AA1-53D5-4449-BE56-2303976B7F89}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{5F7E2AA1-53D5-4449-BE56-2303976B7F89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MVC", "Demo.MVC\Demo.MVC.csproj", "{852DCD90-E892-4FEC-B433-DE1BFDCE42A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MVC", "Demo.MVC\Demo.MVC.csproj", "{852DCD90-E892-4FEC-B433-DE1BFDCE42A8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{8A1FE084-8015-49C6-A1A1-4488119884AC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{8A1FE084-8015-49C6-A1A1-4488119884AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Domain", "Demo.Domain\Demo.Domain.csproj", "{2E678FEE-9822-440C-A305-7B00085A7F83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Domain", "Demo.Domain\Demo.Domain.csproj", "{2E678FEE-9822-440C-A305-7B00085A7F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Infra", "Demo.Infra\Demo.Infra.csproj", "{CD5E5C96-A865-48DB-BED6-C5E022929395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Infra", "Demo.Infra\Demo.Infra.csproj", "{CD5E5C96-A865-48DB-BED6-C5E022929395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

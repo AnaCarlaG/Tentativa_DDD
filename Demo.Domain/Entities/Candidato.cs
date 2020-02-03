@@ -21,6 +21,12 @@ namespace Demo.Domain.Entities
         [Required]
 
         public string CPF { get; set; }
+
+        public bool Any()
+        {
+            throw new NotImplementedException();
+        }
+
         [Required]
 
         public string Bairro { get; set; }
