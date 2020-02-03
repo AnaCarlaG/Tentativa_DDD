@@ -7,12 +7,12 @@ using System.Text;
 
 namespace Demo.Infra.EntityConfig
 {
-    public class CandidatoMap : IEntityTypeConfiguration<Curso>
+    public class CandidatoMap : IEntityTypeConfiguration<Candidato>
     {
-        public void Configure(EntityTypeBuilder<Curso> builder)
+        public void Configure(EntityTypeBuilder<Candidato> builder)
         {
             builder.HasKey(c => c.IdCandidato);
-            builder.HasOne(e => e.Enderecos).WithOne(e => e.candidato).HasForeignKey<Curso>(e => e.IdEndereco);
+            builder.HasOne(e => e.Enderecos).WithOne(e => e.candidato).HasForeignKey<Candidato>(e => e.IdEndereco);
         }
     }
 }

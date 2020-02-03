@@ -15,32 +15,32 @@ namespace Demo.Domain.Services
         {
             this._cursoRepository = _cursoRepository;
         }
-        public Curso Add(Curso entity)
+        public Candidato Add(Candidato entity)
         {
             return _cursoRepository.Add(entity);
         }
 
-        public IEnumerable<Curso> GetAll()
+        public IEnumerable<Candidato> GetAll()
         {
             return _cursoRepository.GetAll();
         }
 
-        public Curso GetForId(int id)
+        public Candidato GetForId(int id)
         {
             return _cursoRepository.GetForId(id);
         }
 
-        public void Remove(Curso entity)
+        public void Remove(Candidato entity)
         {
             _cursoRepository.Remove(entity);
         }
 
-        public IEnumerable<Curso> Search(Expression<Func<Curso, bool>> predicado)
+        public IEnumerable<Candidato> Search(Expression<Func<Candidato, bool>> predicado)
         {
             return _cursoRepository.Search(predicado);
         }
 
-        public void Update(Curso entity)
+        public void Update(Candidato entity)
         {
             _cursoRepository.Update(entity);
         }

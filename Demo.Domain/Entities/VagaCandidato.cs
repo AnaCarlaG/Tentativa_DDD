@@ -20,7 +20,7 @@ namespace Demo.Domain.Entities
         public int IdCurso { get; set; }
         public int IdInstituicao { get; set; }
         public int IdCidade { get; set; }
-        public List<Curso> list_candidatos { get; set; }
+        public List<Candidato> list_candidatos { get; set; }
         public List<CursoInstituicao> list_cursoInstituicao { get; set; }
     }
 }

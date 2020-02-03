@@ -7,6 +7,7 @@ namespace Demo.Domain.Interfaces.Repository
 {
     public interface ICandidatoRepository : IRepository<Candidato>
     {
-        Curso ObterCandidatoPorCidade(int IdCidade);
+        Candidato ObterCandidatoPorCidade(int IdCidade);
+        IEnumerable<Candidato> ObterTodosCandidatosCidade(int IdCidade);
     }
 }

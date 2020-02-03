@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Demo.Domain.Interfaces.Repository
 {
-    public interface ICursoRepository : IRepository<Curso>
+    public interface ICursoRepository : IRepository<Candidato>
     {
     }
 }

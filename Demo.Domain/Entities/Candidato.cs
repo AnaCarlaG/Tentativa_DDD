@@ -32,8 +32,8 @@ namespace Demo.Domain.Entities
         public string TelefoneSecundario { get; set; }
 
         public int IdEndereco { get; set; }
-        public Curso Enderecos { get; set; }
-        public List<Curso> list_enderecos { get; set; }
+        public Endereco Enderecos { get; set; }
+        public List<Endereco> list_enderecos { get; set; }
 
     }
 }

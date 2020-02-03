@@ -25,7 +25,7 @@ namespace Demo.Domain.Entities
 
         public string Cidade { get; set; }
         public int IdCandidato { get; set; }
-        public Curso candidato { get; set; }
+        public Candidato candidato { get; set; }
         public int IdTipoEndereco { get; set; }
         public TipoEndereco tipoendereco { get; set; }
         public Cidade cidade { get; set; }

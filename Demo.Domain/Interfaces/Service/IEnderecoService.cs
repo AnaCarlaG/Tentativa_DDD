@@ -8,11 +8,11 @@ namespace Demo.Domain.Interfaces.Service
 {
     public interface IEnderecoService
     {
-        Curso Add(Curso entity);
-        void Update(Curso entity);
-        IEnumerable<Curso> GetAll();
-        Curso GetForId(int id);
-        IEnumerable<Curso> Search(Expression<Func<Curso, bool>> predicado);
-        void Remove(Curso entity);
+        Candidato Add(Candidato entity);
+        void Update(Candidato entity);
+        IEnumerable<Candidato> GetAll();
+        Candidato GetForId(int id);
+        IEnumerable<Candidato> Search(Expression<Func<Candidato, bool>> predicado);
+        void Remove(Candidato entity);
     }
 }
