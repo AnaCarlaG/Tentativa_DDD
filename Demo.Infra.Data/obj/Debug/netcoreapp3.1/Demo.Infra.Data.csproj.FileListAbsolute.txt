@@ -1,4 +1,0 @@
-C:\Users\acsilva18\source\repos\Demo\Demo.Infra.Data\bin\Debug\netcoreapp3.1\Demo.Domain.dll
-C:\Users\acsilva18\source\repos\Demo\Demo.Infra.Data\obj\Debug\netcoreapp3.1\Demo.Infra.Data.csprojAssemblyReference.cache
-C:\Users\acsilva18\source\repos\Demo\Demo.Infra.Data\obj\Debug\netcoreapp3.1\Demo.Infra.Data.AssemblyInfoInputs.cache
-C:\Users\acsilva18\source\repos\Demo\Demo.Infra.Data\obj\Debug\netcoreapp3.1\Demo.Infra.Data.AssemblyInfo.cs

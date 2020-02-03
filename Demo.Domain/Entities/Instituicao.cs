@@ -5,20 +5,15 @@ using System.Text;
 
 namespace Demo.Domain.Entities
 {
-    public class Cidade
+    public class Instituicao
     {
-        public Cidade()
+        public Instituicao()
         {
 
         }
+
         [Key]
-        public int IdCidade { get; set; }
-        [Required]
-
+        public int IdInstituicao { get; set; }
         public string Nome { get; set; }
-        [Required]
-
-        public string UF { get; set; }
-
     }
 }
