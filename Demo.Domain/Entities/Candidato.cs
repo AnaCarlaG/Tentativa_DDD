@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -22,11 +21,6 @@ namespace Demo.Domain.Entities
 
         public string CPF { get; set; }
 
-        public bool Any()
-        {
-            throw new NotImplementedException();
-        }
-
         [Required]
 
         public string Bairro { get; set; }
@@ -38,8 +32,8 @@ namespace Demo.Domain.Entities
         public string TelefoneSecundario { get; set; }
 
         public int IdEndereco { get; set; }
-        public Endereco Enderecos { get; set; }
-        public List<Endereco> list_enderecos { get; set; }
+        public Curso Enderecos { get; set; }
+        public List<Curso> list_enderecos { get; set; }
 
     }
 }

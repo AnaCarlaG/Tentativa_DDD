@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Demo.Infra.Repository
 {
-    public class EnderecoRepository : EFRepository<Endereco> , IEnderecoRepository
+    public class EnderecoRepository : EFRepository<Curso> , IEnderecoRepository
     {
         public EnderecoRepository(DataContext _dbContext) : base(_dbContext)
         {

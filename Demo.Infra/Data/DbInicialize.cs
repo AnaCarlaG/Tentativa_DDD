@@ -14,19 +14,19 @@ namespace Demo.Infra.Data
             {
                 return;
             }
-            var candidato = new Candidato[]
+            var candidato = new Curso[]
             {
-                new Candidato
+                new Curso
                 {
                     Nome = "Thiago Souza da Silva",
                     CPF = "83847565036",
                 },
-                new Candidato
+                new Curso
                 {
                     Nome = "Elma Souza da Silva",
                     CPF = "50070125058",
                 },
-                new Candidato
+                new Curso
                 {
                     Nome = "Ana Souza da Silva",
                     CPF = "17090223027",

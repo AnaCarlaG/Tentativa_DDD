@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Demo.Domain.Interfaces.Repository
 {
-    public interface IEnderecoRepository : IRepository<Curso>
+    public interface ICursoInstituicaoRepository : IRepository<CursoInstituicao>
     {
+
     }
 }

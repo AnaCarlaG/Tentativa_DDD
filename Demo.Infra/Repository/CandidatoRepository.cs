@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Demo.Infra.Repository
 {
-    public class CandidatoRepository : EFRepository<Candidato>, ICandidatoRepository
+    public class CandidatoRepository : EFRepository<Curso>, ICandidatoRepository
     {
 
         public CandidatoRepository(DataContext _dbContext) : base(_dbContext)
@@ -16,7 +16,7 @@ namespace Demo.Infra.Repository
 
         }
 
-        public Candidato ObterCandidatoPorCidade(int IdCidade)
+        public Curso ObterCandidatoPorCidade(int IdCidade)
         {
            return Search(cand => cand.list_enderecos.Any()).Where(c => c.Enderecos.IdCidade == IdCidade).FirstOrDefault();
             
