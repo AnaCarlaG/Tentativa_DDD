@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acsilva18\\source\\repos\\Demo\\Demo.Domain\\Demo.Domain.csproj": {}
+    "C:\\Users\\solar\\source\\repos\\AnaCarlaG\\Tentativa_DDD\\Demo.Domain\\Demo.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acsilva18\\source\\repos\\Demo\\Demo.Domain\\Demo.Domain.csproj": {
+    "C:\\Users\\solar\\source\\repos\\AnaCarlaG\\Tentativa_DDD\\Demo.Domain\\Demo.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acsilva18\\source\\repos\\Demo\\Demo.Domain\\Demo.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\solar\\source\\repos\\AnaCarlaG\\Tentativa_DDD\\Demo.Domain\\Demo.Domain.csproj",
         "projectName": "Demo.Domain",
-        "projectPath": "C:\\Users\\acsilva18\\source\\repos\\Demo\\Demo.Domain\\Demo.Domain.csproj",
-        "packagesPath": "C:\\Users\\acsilva18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acsilva18\\source\\repos\\Demo\\Demo.Domain\\obj\\",
+        "projectPath": "C:\\Users\\solar\\source\\repos\\AnaCarlaG\\Tentativa_DDD\\Demo.Domain\\Demo.Domain.csproj",
+        "packagesPath": "C:\\Users\\solar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\solar\\source\\repos\\AnaCarlaG\\Tentativa_DDD\\Demo.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\acsilva18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\solar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

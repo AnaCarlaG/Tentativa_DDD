@@ -9,3 +9,6 @@ C:\Users\acsilva18\source\repos\Demo\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Inf
 C:\Users\acsilva18\source\repos\Demo\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Infra.csproj.CopyComplete
 C:\Users\acsilva18\source\repos\Demo\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Infra.dll
 C:\Users\acsilva18\source\repos\Demo\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Infra.pdb
+C:\Users\solar\source\repos\AnaCarlaG\Tentativa_DDD\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Infra.csprojAssemblyReference.cache
+C:\Users\solar\source\repos\AnaCarlaG\Tentativa_DDD\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Infra.AssemblyInfoInputs.cache
+C:\Users\solar\source\repos\AnaCarlaG\Tentativa_DDD\Demo.Infra\obj\Debug\netcoreapp3.1\Demo.Infra.AssemblyInfo.cs

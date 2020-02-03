@@ -12,8 +12,7 @@ namespace Demo.Infra.EntityConfig
         public void Configure(EntityTypeBuilder<Candidato> builder)
         {
             builder.HasKey(c => c.IdCandidato);
-
-            builder.Entity<Candidato>().HasKey(c => c.IdCandidato);
+            builder.HasOne(e => e.Enderecos).WithOne(e => e.candidato).HasForeignKey<Endereco>(e => e.IdEndereco);
         }
     }
 }

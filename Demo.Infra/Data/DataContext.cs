@@ -15,8 +15,13 @@ namespace Demo.Infra.Data
         }
 
         public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Candidato> Cidades { get; set; }
-
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Cidade> Cidades { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Instituicao> Instituicoes { get; set; }
+        public DbSet<TipoEndereco> TiposEndereco { get; set; }
+        public DbSet<VagaCandidato> VagasCandidatos { get; set; }
+        public DbSet<CursoInstituicao> CursosInstituicoes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

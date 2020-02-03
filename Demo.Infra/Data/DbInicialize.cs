@@ -20,19 +20,16 @@ namespace Demo.Infra.Data
                 {
                     Nome = "Thiago Souza da Silva",
                     CPF = "83847565036",
-                    Estado = "SE"
                 },
                 new Candidato
                 {
                     Nome = "Elma Souza da Silva",
                     CPF = "50070125058",
-                    Estado = "SE"
                 },
                 new Candidato
                 {
                     Nome = "Ana Souza da Silva",
                     CPF = "17090223027",
-                    Estado = "SE"
                 }
         };
             context.AddRange(candidato);
