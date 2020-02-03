@@ -40,16 +40,19 @@ namespace Demo.MVC.Controllers
         }
         public IActionResult Create()
         {
-
             return View("Create");
         }
 
-        public IActionResult Incluir(Candidato c)
+        public IActionResult Incluir(Candidato candidato)
         {
-            
-            candidatoService.Add(c);
+            candidatoService.Add(candidato);
             return RedirectToAction("Index");
         }
 
+        public IActionResult Delete(Candidato candidato)
+        {
+            candidatoService.Remove(candidato);
+            return RedirectToAction("Index");
+        }
     }
 }
