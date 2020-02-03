@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Demo.Domain.Interfaces.Repository;
 using Demo.Infra.Data;
+using Demo.Infra.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,8 +29,10 @@ namespace Demo.MVC
         {
             services.AddControllersWithViews();
 
+
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
             services.AddScoped<DataContext, DataContext>();
+            services.AddTransient<ICandidatoRepository,CandidatoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +60,10 @@ namespace Demo.MVC
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "candidato",
+                    pattern: "{controller=Candidato}/{action=Index}/{id?}");
+
             });
         }
     }

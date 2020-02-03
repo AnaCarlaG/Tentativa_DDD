@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Demo.Domain.Entities.Candidato> 
+
+
+    @{
+        ViewData["Title"] = "CandidatoView";
+    }
+
+    <h1>CandidatoView</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apelido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Logradouro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TelefonePrimario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TelefoneSecundario)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var lista in ViewBag.c)
+            {
+                <tr>
+                    <td>
+                        @lista.Nome
+                    </td>
+                    <td>
+                        @lista.Apelido
+                    </td>
+                    <td>
+                        @lista.CPF
+                    </td>
+                    <td>
+                        @lista.Bairro
+                    </td>
+                    <td>
+                        @lista.Logradouro
+                    </td>
+                    <td>
+                        @lista.Numero
+                    </td>
+                    <td>
+                        @lista.Complemento
+                    </td>
+                    <td>
+                        @lista.Email
+                    </td>
+                    <td>
+                        @lista.TelefonePrimario
+                    </td>
+                    <td>
+                        @lista.TelefoneSecundario
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

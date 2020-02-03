@@ -19,7 +19,7 @@ namespace Demo.MVC
 
             //var host = BuildWebHost(args);
 
-            //using (var scope = host.Services.CreateScope()
+            //using (var scope = host.Services.CreateScope())
             //{
             //    var services = scope.ServiceProvider;
             //    try
