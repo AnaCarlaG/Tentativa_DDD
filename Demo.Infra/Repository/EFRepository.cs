@@ -29,7 +29,7 @@ namespace Demo.Infra.Repository
             return _dbContext.Set<TEntity>().AsEnumerable();
         }
 
-        public virtual TEntity GetForId(int id)
+        public virtual TEntity GetById(int id)
         {
             return _dbContext.Set<TEntity>().Find(id);
         }

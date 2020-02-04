@@ -27,7 +27,7 @@ namespace Demo.Domain.Services
 
         public TipoEndereco GetForId(int id)
         {
-            return _tipoenderecoRepository.GetForId(id);
+            return _tipoenderecoRepository.GetById(id);
         }
 
         public void Remove(TipoEndereco entity)

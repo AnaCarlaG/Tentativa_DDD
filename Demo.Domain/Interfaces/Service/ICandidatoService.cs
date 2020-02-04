@@ -11,7 +11,7 @@ namespace Demo.Domain.Interfaces.Service
         Candidato Add(Candidato entity);
         void Update(Candidato entity);
         IEnumerable<Candidato> GetAll();
-        Candidato GetForId(int id);
+        Candidato GetById(int id);
         IEnumerable<Candidato> Search(Expression<Func<Candidato, bool>> predicado);
         void Remove(Candidato entity);
     }

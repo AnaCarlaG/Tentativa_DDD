@@ -27,7 +27,7 @@ namespace Demo.Domain.Services
 
         public VagaCandidato GetForId(int id)
         {
-            return vagaCandidatoRepository.GetForId(id);
+            return vagaCandidatoRepository.GetById(id);
         }
 
         public void Remove(VagaCandidato entity)

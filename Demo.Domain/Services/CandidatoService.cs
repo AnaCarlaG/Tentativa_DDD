@@ -25,9 +25,9 @@ namespace Demo.Domain.Services
             return _candidatoRepository.GetAll();
         }
 
-        public Candidato GetForId(int id)
+        public Candidato GetById(int id)
         {
-            return _candidatoRepository.GetForId(id);
+            return _candidatoRepository.GetById(id);
         }
 
         public void Remove(Candidato entity)

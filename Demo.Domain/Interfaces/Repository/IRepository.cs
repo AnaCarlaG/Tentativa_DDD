@@ -10,7 +10,7 @@ namespace Demo.Domain.Interfaces.Repository
         TEntity Add(TEntity entity);
         void Update(TEntity entity);
         IEnumerable<TEntity> GetAll();
-        TEntity GetForId(int id);
+        TEntity GetById(int id);
         IEnumerable<TEntity> Search(Expression<Func<TEntity,bool>> predicado);
         void Remove(TEntity entity);
     }

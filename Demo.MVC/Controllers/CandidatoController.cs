@@ -49,9 +49,15 @@ namespace Demo.MVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(Candidato candidato)
+        public IActionResult Delete()
         {
-            candidatoService.Remove(candidato);
+            return View("Delete");
+        }
+
+        public IActionResult Remove (Candidato cand)
+        {
+            var candidatos = candidatoService.GetById(cand.IdCandidato);
+            candidatoService.Remove(candidatos);
             return RedirectToAction("Index");
         }
     }

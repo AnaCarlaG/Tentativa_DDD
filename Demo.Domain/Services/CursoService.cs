@@ -27,7 +27,7 @@ namespace Demo.Domain.Services
 
         public Candidato GetForId(int id)
         {
-            return _cursoRepository.GetForId(id);
+            return _cursoRepository.GetById(id);
         }
 
         public void Remove(Candidato entity)
