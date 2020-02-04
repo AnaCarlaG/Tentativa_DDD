@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Demo.Domain.Entities;
 using Demo.Domain.Interfaces.Repository;
 using Demo.Domain.Services;
+using Demo.Infra.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Demo.MVC.Controllers
 {
@@ -42,6 +44,8 @@ namespace Demo.MVC.Controllers
         {
             return View("Create");
         }
+
+
 
         public IActionResult Incluir(Candidato candidato)
         {

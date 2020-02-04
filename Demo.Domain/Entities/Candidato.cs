@@ -14,15 +14,10 @@ namespace Demo.Domain.Entities
 
         [Key]
         public int IdCandidato { get; set; }
-        [Required]
         public string Nome { get; set; }
         public string Apelido { get; set; }
-        [Required]
 
         public string CPF { get; set; }
-
-        [Required]
-
         public string Bairro { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
