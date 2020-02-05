@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Demo.Domain.Interfaces.Repository;
+using Demo.Domain.Interfaces.Service;
+using Demo.Domain.Services;
 using Demo.Infra.Data;
 using Demo.Infra.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -30,7 +32,8 @@ namespace Demo.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-            services.AddScoped<ICandidatoRepository, CandidatoRepository>();
+            services.AddScoped<IRepository<object>,EFRepository<object>>();
+            services.AddTransient<ICandidatoService, CandidatoService>();
             services.AddControllers();
         }
 

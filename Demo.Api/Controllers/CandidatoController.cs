@@ -16,10 +16,9 @@ namespace Demo.Api.Controllers
     [ApiController]
     public class CandidatoController : ControllerBase
     {
-        private readonly CandidatoService candidatoservice;
-        public CandidatoController(CandidatoRepository candidatorepository)
+        public CandidatoController()
         {
-            candidatoservice = new CandidatoService(candidatorepository);
+
         }
 
         #region getCandidato
@@ -33,10 +32,10 @@ namespace Demo.Api.Controllers
         [HttpGet]
         [Route("")]
 
-        public ActionResult<IEnumerable<Candidato>> GetCandidato()
+        public ActionResult<IEnumerable<Candidato>> GetCandidato([FromServices] CandidatoService candidatoservice)
         {
-            candidatoservice.Add(new Candidato { /*Id = 1,*/ Nome = "Thiago", Apelido = "TT", CPF = "025" });
-            candidatoservice.Add(new Candidato {/* Id = 2,*/ Nome = "Ana", Apelido = "Ana", CPF = "026" });
+            candidatoservice.Add(new Candidato { IdCandidato = 1, Nome = "Thiago", Apelido = "TT", CPF = "025" });
+            candidatoservice.Add(new Candidato { IdCandidato = 2, Nome = "Ana", Apelido = "Ana", CPF = "026" });
             return candidatoservice.GetAll().ToList();
         }
         #endregion
