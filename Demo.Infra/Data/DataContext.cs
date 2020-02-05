@@ -22,11 +22,17 @@ namespace Demo.Infra.Data
         public DbSet<TipoEndereco> TiposEndereco { get; set; }
         public DbSet<VagaCandidato> VagasCandidatos { get; set; }
         public DbSet<CursoInstituicao> CursosInstituicoes { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseInMemoryDatabase("Database");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             modelBuilder.ApplyConfiguration(new CandidatoMap());
-            modelBuilder.Entity<Cidade>().HasKey(c => c.IdCidade);
+            //modelBuilder.Entity<Cidade>().HasKey(c => c.IdCidade);
 
         }
     }
