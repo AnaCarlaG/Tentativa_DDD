@@ -22,9 +22,19 @@ namespace Demo.Domain.Services
             return _candidatoRepository.Add(candidato);
         }
 
-        public IEnumerable<Candidato> GetAll()
+        public IEnumerable<CandidatoViewModel> GetAll()
         {
-            return _candidatoRepository.GetAll();
+            List<CandidatoViewModel> listaCandidatoViewModel = new List<CandidatoViewModel>();
+            
+            foreach (var candidato in _candidatoRepository.GetAll())
+            {
+                CandidatoViewModel candidatoViewModel = new CandidatoViewModel {
+                    Nome = candidato.Nome,
+                    Apelido = candidato.Apelido,
+                    CPF = candidato.CPF };
+                listaCandidatoViewModel.Add(candidatoViewModel);
+            }
+            return listaCandidatoViewModel;
         }
 
         public Candidato GetById(int id)

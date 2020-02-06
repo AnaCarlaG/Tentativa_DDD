@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Demo.Domain.Entities;
 using Demo.Domain.Interfaces.Repository;
 using Demo.Domain.Model;
 using Demo.Domain.Services;
-using Demo.Infra.Data;
-using Demo.Infra.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,85 +15,38 @@ namespace Demo.Api.Controllers
     [Route("[controller]/[action]")]
     public class CandidatoController : ControllerBase
     {
-        public CandidatoController()
+        private CandidatoService _candidatoService;
+        public CandidatoController(ICandidatoRepository candidatoRepository)
         {
-
+            _candidatoService = new CandidatoService(candidatoRepository);
         }
 
-        #region getCandidato
-        /// <summary>
-        /// Get all Candidatos that we have
-        /// </summary>
-        /// <param name="context"></param>
-        /// <returns>
-        /// 200 - pega todos os candidatos
-        /// </returns>
+        [HttpGet]
+        [Route("")]
+        public ActionResult<CandidatoViewModel> Start()
+        {
+            CandidatoViewModel c1 = new CandidatoViewModel { Nome = "Thiago", Apelido = "TT", CPF = "025" };
+            CandidatoViewModel c2 = new CandidatoViewModel { Nome = "Joao", Apelido = "JJ", CPF = "026" };
+            _candidatoService.Add(c1);
+            _candidatoService.Add(c2);
+            return StatusCode(200);
+        }
+
+
         [HttpGet]
         [Route("")]
 
-        public ActionResult<CandidatoViewModel> GetCandidato([FromBody] CandidatoViewModel candidato)
+        public ActionResult<IEnumerable<CandidatoViewModel>> Get()
         {
-            return ;
+            return _candidatoService.GetAll().ToList();
         }
-        #endregion
 
-        #region postCandidato
-        /// <summary>
-        /// Post my Candidatos on my aplication
-        /// </summary>
-        /// <param name="context"></param>
-        /// <param name="model"></param>
-        /// <returns>
-        /// 200 - add na lista de candidatos
-        /// 400 - Bad Request(n add nada)
-        /// </returns>
         [HttpPost]
         [Route("")]
-        public ActionResult<CandidatoViewModel> PostCandidato([FromServices] CandidatoService candidatoService, [FromBody] CandidatoViewModel model)
+        public ActionResult<CandidatoViewModel> Post([FromBody] CandidatoViewModel model)
         {
-            candidatoService.Add(new Candidato { IdCandidato = 1, Nome = "Thiago", Apelido = "TT", CPF = "025" });
-            candidatoService.Add(new Candidato { IdCandidato = 2, Nome = "Ana", Apelido = "Ana", CPF = "026" });
-
-            candidatoService.Add();
+            _candidatoService.Add(model);
             return model;
         }
-        #endregion
-
-        //#region PutCandidato
-        ///// <summary>
-        ///// Editar o Candidato
-        ///// </summary>
-        ///// <param name="model"></param>
-        ///// <returns></returns>
-        //[HttpPut]
-        //[Route("")]
-        //public ActionResult<Candidato> PutCandidato([FromServices] CandidatoService candidatoService, [FromBody] Candidato model)
-        //{
-        //    var candidato = candidatoService.GetById(model.IdCandidato);
-        //    candidatoService.Update(candidato);
-        //    return candidato;
-        //}
-        //#endregion
-
-        //#region DeleteCandidato
-        ///// <summary>
-        ///// Deletar meu Candidato
-        ///// </summary>
-        ///// <param name="model"></param>
-        ///// <returns></returns>
-        //[HttpDelete]
-        //[Route("")]
-        //public ActionResult DeleteCandidato([FromServices] CandidatoService candidatoService, [FromBody] Candidato model)
-        //{
-        //    int qntdObj = candidatoService.GetAll().Count();
-        //    var candidato = candidatoService.GetById(model.IdCandidato);
-        //    candidatoService.Remove(candidato);
-
-        //    if (qntdObj > candidatoService.GetAll().Count())
-        //        return Ok();
-
-        //    return NotFound();
-        //}
-        //#endregion
     }
 }

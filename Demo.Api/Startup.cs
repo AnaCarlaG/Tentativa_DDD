@@ -32,9 +32,7 @@ namespace Demo.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-             services.AddScoped<IRepository<object>,EFRepository<object>>();
             services.AddScoped<ICandidatoRepository, CandidatoRepository>();
-            services.AddScoped<ICandidatoService, CandidatoService>();
             services.AddControllers();
         }
 

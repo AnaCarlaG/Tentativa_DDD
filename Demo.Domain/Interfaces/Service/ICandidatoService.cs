@@ -11,7 +11,7 @@ namespace Demo.Domain.Interfaces.Service
     {
         Candidato Add(CandidatoViewModel model);
         void Update(Candidato entity);
-        IEnumerable<Candidato> GetAll();
+        IEnumerable<CandidatoViewModel> GetAll();
         Candidato GetById(int id);
         IEnumerable<Candidato> Search(Expression<Func<Candidato, bool>> predicado);
         void Remove(Candidato entity);

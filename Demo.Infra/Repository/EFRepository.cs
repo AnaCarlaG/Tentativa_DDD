@@ -26,7 +26,7 @@ namespace Demo.Infra.Repository
 
         public IEnumerable<TEntity> GetAll()
         {
-            return _dbContext.Set<TEntity>().AsEnumerable();
+            return _dbContext.Set<TEntity>().ToList();
         }
 
         public virtual TEntity GetById(int id)
