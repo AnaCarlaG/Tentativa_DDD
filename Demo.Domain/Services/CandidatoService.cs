@@ -1,6 +1,7 @@
 ﻿using Demo.Domain.Entities;
 using Demo.Domain.Interfaces.Repository;
 using Demo.Domain.Interfaces.Service;
+using Demo.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -15,9 +16,10 @@ namespace Demo.Domain.Services
         {
             this._candidatoRepository = candidatoRepository;
         }
-        public Candidato Add(Candidato entity)
+        public Candidato Add(CandidatoViewModel model)
         {
-            return _candidatoRepository.Add(entity);
+            Candidato candidato = new Candidato(model.Nome,model.Apelido,model.CPF);
+            return _candidatoRepository.Add(candidato);
         }
 
         public IEnumerable<Candidato> GetAll()

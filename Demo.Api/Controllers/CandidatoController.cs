@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Demo.Domain.Entities;
 using Demo.Domain.Interfaces.Repository;
+using Demo.Domain.Model;
 using Demo.Domain.Services;
 using Demo.Infra.Data;
 using Demo.Infra.Repository;
@@ -33,9 +34,9 @@ namespace Demo.Api.Controllers
         [HttpGet]
         [Route("")]
 
-        public ActionResult<Candidato> GetCandidato([FromBody] Candidato candidato)
+        public ActionResult<CandidatoViewModel> GetCandidato([FromBody] CandidatoViewModel candidato)
         {
-            return candidato;
+            return ;
         }
         #endregion
 
@@ -51,12 +52,12 @@ namespace Demo.Api.Controllers
         /// </returns>
         [HttpPost]
         [Route("")]
-        public ActionResult<Candidato> PostCandidato([FromServices] CandidatoService candidatoService, [FromBody] Candidato model)
+        public ActionResult<CandidatoViewModel> PostCandidato([FromServices] CandidatoService candidatoService, [FromBody] CandidatoViewModel model)
         {
             candidatoService.Add(new Candidato { IdCandidato = 1, Nome = "Thiago", Apelido = "TT", CPF = "025" });
             candidatoService.Add(new Candidato { IdCandidato = 2, Nome = "Ana", Apelido = "Ana", CPF = "026" });
 
-            candidatoService.Add(model);
+            candidatoService.Add();
             return model;
         }
         #endregion

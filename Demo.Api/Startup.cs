@@ -32,8 +32,9 @@ namespace Demo.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-            services.AddScoped<IRepository<object>,EFRepository<object>>();
-            services.AddTransient<ICandidatoService, CandidatoService>();
+             services.AddScoped<IRepository<object>,EFRepository<object>>();
+            services.AddScoped<ICandidatoRepository, CandidatoRepository>();
+            services.AddScoped<ICandidatoService, CandidatoService>();
             services.AddControllers();
         }
 
@@ -49,7 +50,7 @@ namespace Demo.Api
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

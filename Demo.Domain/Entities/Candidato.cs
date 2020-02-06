@@ -12,6 +12,13 @@ namespace Demo.Domain.Entities
 
         }
 
+        public Candidato(string nome, string apelido, string cPF)
+        {
+            Nome = nome;
+            Apelido = apelido;
+            CPF = cPF;
+        }
+
         [Key]
         public int IdCandidato { get; set; }
         public string Nome { get; set; }
