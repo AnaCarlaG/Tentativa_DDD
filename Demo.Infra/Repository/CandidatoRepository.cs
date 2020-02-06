@@ -19,7 +19,6 @@ namespace Demo.Infra.Repository
         public Candidato ObterCandidatoPorCidade(int IdCidade)
         {
            return Search(cand => cand.list_enderecos.Any()).Where(c => c.Enderecos.IdCidade == IdCidade).FirstOrDefault();
-            
         }
 
         public IEnumerable<Candidato> ObterTodosCandidatosCidade(int IdCidade)

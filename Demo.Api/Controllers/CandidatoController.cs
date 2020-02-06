@@ -12,8 +12,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Api.Controllers
 {
-    [Route("candidato")]
+
     [ApiController]
+    [Route("[controller]/[action]")]
     public class CandidatoController : ControllerBase
     {
         public CandidatoController()
@@ -32,33 +33,33 @@ namespace Demo.Api.Controllers
         [HttpGet]
         [Route("")]
 
-        public ActionResult<IEnumerable<Candidato>> GetCandidato([FromServices] CandidatoService candidatoservice)
+        public ActionResult<Candidato> GetCandidato([FromBody] Candidato candidato)
         {
-            candidatoservice.Add(new Candidato { IdCandidato = 1, Nome = "Thiago", Apelido = "TT", CPF = "025" });
-            candidatoservice.Add(new Candidato { IdCandidato = 2, Nome = "Ana", Apelido = "Ana", CPF = "026" });
-            return candidatoservice.GetAll().ToList();
+            return candidato;
         }
         #endregion
 
-        //#region postCandidato
-        ///// <summary>
-        ///// Post my Candidatos on my aplication
-        ///// </summary>
-        ///// <param name="context"></param>
-        ///// <param name="model"></param>
-        ///// <returns>
-        ///// 200 - add na lista de candidatos
-        ///// 400 - Bad Request(n add nada)
-        ///// </returns>
-        //[HttpPost]
-        //[Route("")]
-        //public ActionResult<Candidato> PostCandidato([FromServices] CandidatoService candidatoService, [FromBody] Candidato model)
-        //{
-        //    candidatoService.Add(model);
-        //    return model;
+        #region postCandidato
+        /// <summary>
+        /// Post my Candidatos on my aplication
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="model"></param>
+        /// <returns>
+        /// 200 - add na lista de candidatos
+        /// 400 - Bad Request(n add nada)
+        /// </returns>
+        [HttpPost]
+        [Route("")]
+        public ActionResult<Candidato> PostCandidato([FromServices] CandidatoService candidatoService, [FromBody] Candidato model)
+        {
+            candidatoService.Add(new Candidato { IdCandidato = 1, Nome = "Thiago", Apelido = "TT", CPF = "025" });
+            candidatoService.Add(new Candidato { IdCandidato = 2, Nome = "Ana", Apelido = "Ana", CPF = "026" });
 
-        //}
-        //#endregion
+            candidatoService.Add(model);
+            return model;
+        }
+        #endregion
 
         //#region PutCandidato
         ///// <summary>
