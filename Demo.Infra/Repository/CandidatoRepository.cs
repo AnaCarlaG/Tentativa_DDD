@@ -10,21 +10,24 @@ namespace Demo.Infra.Repository
 {
     public class CandidatoRepository : EFRepository<Candidato>, ICandidatoRepository
     {
-
+        
         public CandidatoRepository(DataContext _dbContext) : base(_dbContext)
         {
-
+            
         }
 
-        public Candidato ObterCandidatoPorCidade(int IdCidade)
+        public Candidato GetByCpf(string cpf)
         {
-           return Search(cand => cand.list_enderecos.Any()).Where(c => c.Enderecos.IdCidade == IdCidade).FirstOrDefault();
+            foreach(var candidato in GetAll())
+            {
+                if (candidato.CPF == cpf)
+                    return candidato;
+                   
+            }
+            return null;
         }
 
-        public IEnumerable<Candidato> ObterTodosCandidatosCidade(int IdCidade)
-        {
-            return Search(cand => cand.list_enderecos.Any()).Where(c => c.Enderecos.IdCidade == IdCidade);
-
-        }
+       
     }
 }
+

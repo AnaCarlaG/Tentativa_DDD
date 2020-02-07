@@ -37,14 +37,27 @@ namespace Demo.Domain.Services
             return listaCandidatoViewModel;
         }
 
-        public Candidato GetById(int id)
+        public CandidatoViewModel GetByCpf(string cpf)
         {
-            return _candidatoRepository.GetById(id);
+            Candidato candidato = _candidatoRepository.GetByCpf(cpf);
+            if(candidato != null)
+            {
+                CandidatoViewModel candidatoViewModel = new CandidatoViewModel
+                {
+                    Nome = candidato.Nome,
+                    Apelido = candidato.Apelido,
+                    CPF = candidato.CPF
+                };
+                return candidatoViewModel;
+            }
+            return null;
         }
 
-        public void Remove(Candidato entity)
+        public void RemoveByCpf(string cpf)
         {
-            _candidatoRepository.Remove(entity);
+            Candidato candidato = _candidatoRepository.GetByCpf(cpf);
+            if (candidato != null)
+                _candidatoRepository.Remove(candidato);
         }
 
         public IEnumerable<Candidato> Search(Expression<Func<Candidato, bool>> predicado)
@@ -52,9 +65,10 @@ namespace Demo.Domain.Services
             return _candidatoRepository.Search(predicado);
         }
 
-        public void Update(Candidato entity)
+        public void UpdateByCpf(CandidatoViewModel candidatoViewModel)
         {
-            _candidatoRepository.Update(entity);
+           _candidatoRepository.Update(new Candidato(candidatoViewModel.Nome, candidatoViewModel.Apelido, candidatoViewModel.CPF));
+
         }
     }
 }

@@ -10,10 +10,10 @@ namespace Demo.Domain.Interfaces.Service
     public interface ICandidatoService 
     {
         Candidato Add(CandidatoViewModel model);
-        void Update(Candidato entity);
         IEnumerable<CandidatoViewModel> GetAll();
-        Candidato GetById(int id);
+        CandidatoViewModel GetByCpf(string cpf);
         IEnumerable<Candidato> Search(Expression<Func<Candidato, bool>> predicado);
-        void Remove(Candidato entity);
+        void UpdateByCpf(CandidatoViewModel candidatoViewModel);
+        void RemoveByCpf(string cpf);
     }
 }

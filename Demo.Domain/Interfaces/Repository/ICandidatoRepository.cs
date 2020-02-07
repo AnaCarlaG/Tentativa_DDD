@@ -7,7 +7,6 @@ namespace Demo.Domain.Interfaces.Repository
 {
     public interface ICandidatoRepository : IRepository<Candidato>
     {
-        Candidato ObterCandidatoPorCidade(int IdCidade);
-        IEnumerable<Candidato> ObterTodosCandidatosCidade(int IdCidade);
+        public Candidato GetByCpf(string cpf);
     }
 }

@@ -29,11 +29,7 @@ namespace Demo.Infra.Repository
             return _dbContext.Set<TEntity>().ToList();
         }
 
-        public virtual TEntity GetById(int id)
-        {
-            return _dbContext.Set<TEntity>().Find(id);
-        }
-
+        
         public void Remove(TEntity entity)
         {
             _dbContext.Set<TEntity>().Remove(entity);
@@ -42,7 +38,7 @@ namespace Demo.Infra.Repository
 
         public IEnumerable<TEntity> Search(Expression<Func<TEntity, bool>> predicado)
         {
-            return _dbContext.Set<TEntity>().Where(predicado).AsEnumerable();
+            throw new NotImplementedException();
         }
 
         public virtual void Update(TEntity entity)

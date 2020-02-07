@@ -32,21 +32,68 @@ namespace Demo.Api.Controllers
             return StatusCode(200);
         }
 
-
-        [HttpGet]
-        [Route("")]
-
-        public ActionResult<IEnumerable<CandidatoViewModel>> Get()
-        {
-            return _candidatoService.GetAll().ToList();
-        }
-
         [HttpPost]
         [Route("")]
         public ActionResult<CandidatoViewModel> Post([FromBody] CandidatoViewModel model)
         {
             _candidatoService.Add(model);
             return model;
+        }
+        [HttpGet]
+        [Route("")]
+        public ActionResult<IEnumerable<CandidatoViewModel>> GetAll()
+        {
+            return _candidatoService.GetAll().ToList();
+        }
+
+        [HttpGet]
+        [Route("")]
+        public ActionResult<CandidatoViewModel> GetByCpf([FromBody] string cpf)
+        {
+            CandidatoViewModel candidatoViewModel = _candidatoService.GetByCpf(cpf); ;
+            if(candidatoViewModel != null)
+            {
+                StatusCode(200);
+                return candidatoViewModel;
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
+
+        [HttpDelete]
+        [Route("")]
+        public ActionResult<CandidatoViewModel> DeleteByCpf([FromBody] string cpf)
+        {
+            CandidatoViewModel candidatoViewModel = _candidatoService.GetByCpf(cpf); ;
+            if (candidatoViewModel != null)
+            {
+                _candidatoService.RemoveByCpf(cpf);
+                StatusCode(200);
+                return candidatoViewModel;
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
+
+        [HttpPut]
+        [Route("")]
+        public ActionResult<CandidatoViewModel> PutByCpf([FromBody] CandidatoPutViewModel candidatoPutViewModel)
+        {
+            CandidatoViewModel candidatoViewModel = _candidatoService.GetByCpf(candidatoPutViewModel.searchCPf); ;
+            if (candidatoViewModel != null)
+            {
+                _candidatoService.UpdateByCpf(candidatoViewModel);
+                StatusCode(200);
+                return candidatoViewModel;
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
     }
 }
