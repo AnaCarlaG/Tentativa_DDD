@@ -1,8 +1,0 @@
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\bin\Debug\netcoreapp3.1\Demo.Domain.deps.json
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\bin\Debug\netcoreapp3.1\Demo.Domain.dll
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\bin\Debug\netcoreapp3.1\Demo.Domain.pdb
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\obj\Debug\netcoreapp3.1\Demo.Domain.csprojAssemblyReference.cache
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\obj\Debug\netcoreapp3.1\Demo.Domain.AssemblyInfoInputs.cache
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\obj\Debug\netcoreapp3.1\Demo.Domain.AssemblyInfo.cs
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\obj\Debug\netcoreapp3.1\Demo.Domain.dll
-C:\Users\acsilva18\source\repos\Tentativa_DDD\Demo.Domain\obj\Debug\netcoreapp3.1\Demo.Domain.pdb
