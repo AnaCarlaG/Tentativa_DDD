@@ -27,8 +27,13 @@ namespace Demo.Domain.Services
 
         public VagaCandidato GetForId(int id)
         {
-            return vagaCandidatoRepository.GetById(id);
+            throw new NotImplementedException();
         }
+
+        //public VagaCandidato GetForId(int id)
+        //{
+        //    return vagaCandidatoRepository.GetById(id);
+        //}
 
         public void Remove(VagaCandidato entity)
         {

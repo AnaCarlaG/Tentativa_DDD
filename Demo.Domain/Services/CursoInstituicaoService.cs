@@ -27,8 +27,13 @@ namespace Demo.Domain.Services
 
         public CursoInstituicao GetForId(int id)
         {
-            return _cursoinstituicaoRepository.GetById(id);
+            throw new NotImplementedException();
         }
+
+        //public CursoInstituicao GetForId(int id)
+        //{
+        //    return _cursoinstituicaoRepository.GetById(id);
+        //}
 
         public void Remove(CursoInstituicao entity)
         {

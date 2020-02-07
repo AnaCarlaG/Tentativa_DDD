@@ -25,10 +25,10 @@ namespace Demo.Domain.Services
             return _cursoRepository.GetAll();
         }
 
-        public Candidato GetForId(int id)
-        {
-            return _cursoRepository.GetById(id);
-        }
+        //public Candidato GetByCpf(int cpf)
+        //{
+        //    return _cursoRepository.GetById(id);
+        //}
 
         public void Remove(Candidato entity)
         {

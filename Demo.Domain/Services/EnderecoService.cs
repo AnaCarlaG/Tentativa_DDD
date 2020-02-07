@@ -27,8 +27,13 @@ namespace Demo.Domain.Services
 
         public Candidato GetForId(int id)
         {
-            return _enderecoRepository.GetById(id);
+            throw new NotImplementedException();
         }
+
+        //public Candidato GetForId(int id)
+        //{
+        //    return _enderecoRepository.GetById(id);
+        //}
 
         public void Remove(Candidato entity)
         {

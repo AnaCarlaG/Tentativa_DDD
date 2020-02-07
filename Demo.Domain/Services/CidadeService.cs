@@ -27,8 +27,13 @@ namespace Demo.Domain.Services
 
         public Cidade GetForId(int id)
         {
-            return _cidadeRepository.GetById(id);
+            throw new NotImplementedException();
         }
+
+        //public Cidade GetForId(int id)
+        //{
+        //    return _cidadeRepository.GetById(id);
+        //}
 
         public void Remove(Cidade entity)
         {

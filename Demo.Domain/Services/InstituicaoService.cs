@@ -24,10 +24,10 @@ namespace Demo.Domain.Services
             return _instituicaoRepository.GetAll();
         }
 
-        public Instituicao GetForId(int id)
-        {
-            return _instituicaoRepository.GetById(id);
-        }
+        //public Instituicao GetForId(int id)
+        //{
+        //    return _instituicaoRepository.GetById(id);
+        //}
 
         public void Remove(Instituicao entity)
         {
